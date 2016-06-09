@@ -1,0 +1,28 @@
+{
+  "name": "s-stream",
+  "version": "0.0.0",
+  "description": "Minimal streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastiansandqvist/s-stream.git"
+  },
+  "keywords": [
+    "stream",
+    "node",
+    "browser"
+  ],
+  "author": "sebastian sandqvist",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastiansandqvist/s-stream/issues"
+  },
+  "homepage": "https://github.com/sebastiansandqvist/s-stream#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.5.3"
+  }
+}
