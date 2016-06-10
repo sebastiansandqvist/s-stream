@@ -21,6 +21,33 @@ describe('stream', function() {
 			expect(s()).to.equal(3);
 		});
 
+		it('should display value as String in toString', function() {
+			var s1 = stream(1);
+			var s2 = stream('test');
+			var s3 = stream(true);
+			var s4 = stream(false);
+			var s5 = stream(undefined);
+			var s6 = stream(null);
+			var s7 = stream(NaN);
+			var s8 = stream(function() {});
+			var s9 = stream(new Promise(function() {}));
+			var s10 = stream({});
+			var s11 = stream([]);
+			var s12 = stream();
+			expect(s1.toString()).to.equal('stream(Number)');
+			expect(s2.toString()).to.equal('stream(String)');
+			expect(s3.toString()).to.equal('stream(Boolean)');
+			expect(s4.toString()).to.equal('stream(Boolean)');
+			expect(s5.toString()).to.equal('stream(Undefined)');
+			expect(s6.toString()).to.equal('stream(Null)');
+			expect(s7.toString()).to.equal('stream(Number)');
+			expect(s8.toString()).to.equal('stream(Function)');
+			expect(s9.toString()).to.equal('stream(Promise)');
+			expect(s10.toString()).to.equal('stream(Object)');
+			expect(s11.toString()).to.equal('stream(Array)');
+			expect(s12.toString()).to.equal('stream(Undefined)');
+		});
+
 	});
 
 	describe('.map / .off', function() {

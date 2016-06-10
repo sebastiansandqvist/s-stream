@@ -62,6 +62,11 @@ var stream = function(value) {
 		return s;
 	};
 
+	s.toString = function() {
+		var type = Object.prototype.toString.call(s()).slice(8, -1);
+		return 'stream('.concat(type).concat(')');
+	};
+
 	if (initWithPromise) { s(value); }
 
 	return s;

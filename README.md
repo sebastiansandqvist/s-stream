@@ -84,3 +84,12 @@ var f = function() {};
 s.map(f);
 s.off(f);
 ```
+
+### Other information
+
+`stream.toString` returns a string of form `stream(contentType)`
+
+```javascript
+var s = stream(123);
+s.toString(); // `stream(Number)`
+```
